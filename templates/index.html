@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy Clone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Skills that drive you forward</h1>
+        <button onclick="menu()" class="menu">☰</button>
+        <button onclick="darklight()">🌓 Ganti Mode</button>
+    </header>
+    <main class="content">
+        <section>
+            <h2>Ready to reimagine your career?</h2>
+            <div class="course">
+                <h3>Full Stack Web Developer</h3>
+                <p>$127,005 average salary</p>
+                <p>16,500 open roles (US)</p>
+                <p>4.7 ⭐ ratings</p>
+            </div>
+            <div class="course">
+                <h3>Digital Marketer</h3>
+                <p>$61,126 average salary</p>
+                <p>36,600 open roles (US)</p>
+                <p>4.6 ⭐ ratings</p>
+            </div>
+            <div class="course">
+                <h3>Data Scientist</h3>
+                <p>$126,629 average salary</p>
+                <p>20,800 open roles (US)</p>
+                <p>4.8 ⭐ ratings</p>
+            </div>
+        </section>
+
+        <div id="sidebar" class="sidebar">
+            <button onclick="menu()" class="closebuton">x</button>
+            <h2>Menu</h2>
+            <ul>
+                <li> <a href="profil.html">PROFIL</a> </li>
+                
+                <li> <a href="materi.html">MATERI</a> </li>
+                
+                <li> <a href="komunitas.html">KOMUNITAS</a> </li>
+                <hr>
+                <li>About</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <script>
+        function menu() {
+            const sidebar = document.getElementById("sidebar");
+           sidebar.classList.toggle("open"); 
+        }
+
+        function darklight() {
+            
+            document.body.classList.toggle("dark");
+            
+        }
+    </script>
+        
+</body>
+</html>
